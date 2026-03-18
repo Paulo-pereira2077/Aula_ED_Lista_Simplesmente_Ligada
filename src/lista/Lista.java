@@ -17,7 +17,7 @@ public class Lista {
         // Quando a lista não estiver vazia
             atual = new No(produto, null);
             auxiliar.setProx(atual);
-
+            auxiliar = atual;
         }
     }
 
