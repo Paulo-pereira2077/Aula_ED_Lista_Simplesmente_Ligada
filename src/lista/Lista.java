@@ -40,4 +40,34 @@ public class Lista {
 
     }
 
+    /**
+     * Método para realizar a pesquisa na lista pelo ID
+     * @param id Produto
+     */
+    public Produto pesquisar(int id) {
+        No e = inicio;
+        while (e != null) {
+            if (e.getProduto().getId() == id) {
+                return e.getProduto();
+            }
+            e = e.getProx();
+        }
+        return null; // Retorna null caso não encontre o ID
+    }
+
+    /**
+     * Método para atualizar o preço de produto pelo id
+     * @param id Produto
+     */
+    public boolean atualizar(int id, float preco) {
+        Produto p = pesquisar(id);
+
+        if (p != null) {
+            p.setPreco(preco);
+            return true;
+        }
+        return false;
+    }
+
+
 }

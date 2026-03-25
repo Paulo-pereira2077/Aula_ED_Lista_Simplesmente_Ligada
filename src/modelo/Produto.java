@@ -3,17 +3,19 @@ package modelo;
 public class Produto {
 
     private String nome;
-    private Double preco;
+    private float preco;
     private int id;
     private static int cont = 1;
 
     public Produto(int id){
-        this.id= cont++;
+
+        this.id= id;
     }
 
-    public Produto(String nome, double preco) {
+    public Produto(String nome, float preco) {
         this.nome = nome;
         this.preco = preco;
+        this.id= cont++;
     }
 
     public String getNome() {
@@ -24,11 +26,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Double getPreco() {
+    public float getPreco() {
         return preco;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
 
@@ -40,6 +42,6 @@ public class Produto {
 
     public String toString(){
 
-        return "Produto{" + "Nome: " + nome + "; Preço: " + preco + "; Id: " + id + "; Contador: " + cont + "}";
+        return "Produto{" + "Nome: " + nome + "; Preço: " + preco + "; Id: " + id + "; Conta: "+"}";
     }
 }
