@@ -37,6 +37,14 @@ public class UsaLista {
 
         System.out.println("\n--- Lista Após Atualização ---");
         lista.exibir();
+
+        System.out.println("\n === Remoção ===");
+        if(lista.remover(22)){
+            lista.exibir();
+        }
+        else{
+            System.out.println("Não achou o id pesquisado");
+        }
     }
 
 }

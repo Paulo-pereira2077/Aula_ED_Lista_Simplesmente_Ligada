@@ -69,5 +69,36 @@ public class Lista {
         return false;
     }
 
+    public boolean remover(int id){
+        //Pesquisar
 
+        No remove = inicio, anterior = inicio;
+            while(remove != null){
+                if(id == remove.getProduto().getId()){
+                    break;
+                }
+                anterior = remove;
+                remove = remove.getProx();
+            }
+            if (remove != null){
+                //Remover um nó da lista
+
+                if(remove == inicio){//1º caso
+                    inicio = remove.getProx();
+                    remove.setProx(null);
+                }
+                else if(remove == atual){//2º caso
+                    atual = anterior;
+                    auxiliar = anterior;
+                    anterior.setProx(null);
+                }
+                else{
+                    anterior.setProx(remove.getProx());
+                    remove.setProx(null);
+                }
+
+                return true;
+            }
+            return false;
+    }
 }
