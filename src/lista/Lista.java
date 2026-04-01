@@ -101,4 +101,20 @@ public class Lista {
             }
             return false;
     }
+
+    public boolean removerLista(){
+        No remove = inicio;
+
+        while(auxiliar != null){
+            auxiliar = inicio.getProx();
+            remove.setProx(null);
+            remove = auxiliar;
+        }
+        return true;
+    }
+
+    public boolean atualizarLista(float p){
+
+    }
+
 }
