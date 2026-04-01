@@ -103,18 +103,36 @@ public class Lista {
     }
 
     public boolean removerLista(){
-        No remove = inicio;
-
-        while(auxiliar != null){
-            auxiliar = inicio.getProx();
-            remove.setProx(null);
-            remove = auxiliar;
+        if(inicio == null){
+            return false;
         }
+
+        inicio = null;
+        auxiliar = null;
+        atual = null;
+
         return true;
     }
 
     public boolean atualizarLista(float p){
+        if(inicio == null){
+            return false;
+        }
 
+        No e = inicio;
+
+        while(e != null){
+            Produto prod = e.getProduto();
+
+
+            float novoPreco = prod.getPreco() * (1 + p / 100);
+
+            prod.setPreco(novoPreco);
+
+            e = e.getProx();
+        }
+
+        return true;
     }
 
 }

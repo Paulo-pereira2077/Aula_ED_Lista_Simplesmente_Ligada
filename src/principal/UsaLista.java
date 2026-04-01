@@ -45,6 +45,36 @@ public class UsaLista {
         else{
             System.out.println("Não achou o id pesquisado");
         }
-    }
 
+//        // Exercício 1 - Remover lista inteira
+
+//        System.out.println("\n--- Removendo toda a lista ---");
+//        boolean removeuLista = lista.removerLista();
+//
+//        if(removeuLista){
+//            System.out.println("Lista apagada com sucesso!");
+//        }
+//        else {
+//            System.out.println("Lista já estava vazia.");
+//        }
+//
+//        System.out.println("\n--- Tentando exibir lista após remoção ---");
+//        lista.exibir();
+
+        // Exercício 2 - Atualizar lista inteira (porcentagem)
+
+        System.out.println("\n--- Atualizando TODOS os preços em 10% ---");
+        boolean atualizouLista = lista.atualizarLista(10f);
+
+        if(atualizouLista){
+            System.out.println("\n Preços atualizados com sucesso!");
+            lista.exibir();
+        }
+        else {
+            System.out.println("Lista vazia, nada para atualizar.");
+        }
+
+        System.out.println("\n--- Lista Após Atualização ---");
+        lista.exibir();
+    }
 }

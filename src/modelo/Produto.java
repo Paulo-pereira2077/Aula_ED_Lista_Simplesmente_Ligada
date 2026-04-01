@@ -42,6 +42,6 @@ public class Produto {
 
     public String toString(){
 
-        return "Produto{" + "Nome: " + nome + "; Preço: " + preco + "; Id: " + id + "; Conta: "+"}";
+        return "Produto{" + "Nome: " + nome + "; Preço: " + String.format("%.2f", preco) + "; Id: " + id + "; Conta: "+"}";
     }
 }
